@@ -1,0 +1,101 @@
+@charset "utf-8";
+    #vs .img_box {
+        width:300vw;
+        overflow: hidden;
+        transition: 0.8s; 
+    }
+
+    #vs .img_box li {
+        width: 100vw;
+        float:left;
+        position: relative;
+    }
+
+    #vs img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .tit_box {
+        position: absolute;
+        top: 0;
+        width: 100%; 
+        left: 40px;
+        color: #fff;
+    }
+
+    .tit_box h3 {
+        text-align: center;
+        font-family: 'NanumPen';
+        font-size: 98px;
+        text-shadow: 2px 2px 0 #05AFF2;
+    }
+
+    .tit_box a {
+        display: block;
+        width: 150px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        clear: both;
+        margin: 10px auto;
+        color: #fff;
+        text-shadow: 1px 1px 0px #05AFF2;
+        background-color: rgba(5, 115, 192, 0.6);
+        transition: 0.6s; 
+        border-radius: 35px 0px 35px 0px; 
+    }
+
+    .tit_box a:hover {
+        border-radius: 0px 35px 0px 35px;
+    }
+
+    .btn_box {
+        position:absolute;
+        left: 0;
+        bottom: 4%; 
+        z-index: 10;
+        width: 100%;
+        height:24px;
+    }
+    .btn_wrap {
+        width: 80px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .btn_wrap li {
+        width: 25px;
+    }
+    .vs_btn {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+        cursor: pointer;
+        border:1px solid #ccc;
+        box-shadow: 1px 1px 0px #fff;
+    }
+    .ra {
+        display: none; 
+    }
+    #ra1:checked ~ .img_box {
+        margin-left: 0;
+    }
+    #ra2:checked ~ .img_box {
+        margin-left:-100vw;
+    }
+    #ra3:checked ~ .img_box {
+        margin-left:-200vw;
+    }
+    #ra1:checked ~ .btn_box #vs_btn1 {
+        background-color: #030A8C;
+    }
+    #ra2:checked ~ .btn_box #vs_btn2 {
+        background-color: #030A8C;
+    }
+    #ra3:checked ~ .btn_box #vs_btn3 {
+        background-color: #030A8C;
+    }

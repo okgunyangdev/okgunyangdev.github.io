@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+    <title>거제 문화 관광</title>
+    <!-- 메타포: 바로 가기 아이콘, 홈페이지 제목, 검색어, 설명 -->
+    <meta name="title" content="거제시청 관광문화 홈페이지">
+    <meta name="keywords" content="거제관광문화, 거제시청 관광문화, 거제시 여행정보">
+    <meta name="description" content="거제관광문화 홈페이지">
+    <!-- 오픈 그래프 -->
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="거제시청 관광문화 홈페이지">
+    <meta property="og:description" content="거제관광문화 홈페이지">
+    <meta property="og:site_name" content="거제관광문화">
+    <meta property="og:url" content="https://okgunyang.github.io/web01">   <!-- 실제 사이트 주소로 변경 -->
+    <meta property="og:image" content="https://okgunyang.github.io/images/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="거제시청 관광문화 홈페이지">
+    <meta name="twitter:description" content="거제관광문화 홈페이지">
+    <meta name="twitter:image" content="https://okgunyang.github.io/images/og-image.jpg">
+    <meta name="twitter:site" content="@GeojeTour">   <!-- 공식 계정 있으면 -->
+    <!-- 폰트, 초기화(reset.css), 아이콘 셋 -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="font2.css">
+    <link rel="stylesheet" href="iconset.css">
+    <link rel="stylesheet" href="xeicon.css">
+    <style>
+    h1, h2, h3, h4, h5, h6 { font-family: 'Noto', sans-serif; line-height:1.6; padding-top:0.6em; padding-bottom:0.6em; }
+    h1 { font-weight: 900; font-size:72px; }
+    h2 { font-weight: 800; font-size:60px; }
+    h3 { font-weight: 700; font-size:48px; }
+    h4 { font-weight: 600; font-size:36px; }
+    h5 { font-weight: 500; font-size:20px; }
+    h6 { font-weight: 400; font-size:12px; }
+    p { font-family: 'Noto', sans-serif; font-weight:400; }
+    </style> 
+    <link rel="stylesheet" href="common.css">
+    <style>
+    #vs {
+        position:relative;
+    }
+    #vs .img_box {
+        width:300vw;
+        overflow: hidden;
+        transition: 0.8s; 
+    }
+
+    #vs .img_box li {
+        width: 100vw;
+        float:left;
+        position: relative;
+    }
+
+    #vs img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .tit_box {
+        position: absolute;
+        top: 0;
+        width: 100%; 
+        left: 40px;
+        color: #fff;
+    }
+
+    .tit_box h3 {
+        text-align: center;
+        font-family: 'NanumPen';
+        font-size: 92px;
+        text-shadow: 2px 2px 0 #05AFF2;
+    }
+
+    .tit_box a {
+        display: block;
+        width: 150px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        clear: both;
+        margin: 10px auto;
+        color: #fff;
+        text-shadow: 1px 1px 0px #05AFF2;
+        background-color: rgba(5, 115, 192, 0.6);
+        transition: 0.6s; 
+        border-radius: 35px 0px 35px 0px; 
+    }
+
+    .tit_box a:hover {
+        border-radius: 0px 35px 0px 35px;
+    }
+
+    .btn_box {
+        position:absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 100%;
+        height:24px;
+    }
+    .btn_wrap {
+        width: 80px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .btn_wrap li {
+        width: 25px;
+    }
+    .vs_btn {
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+        cursor: pointer;
+        border:1px solid #ccc;
+        box-shadow: 1px 1px 0px #fff;
+    }
+    .ra {
+        display: none; 
+    }
+    #ra1:checked ~ .img_box {
+        margin-left: 0;
+    }
+    #ra2:checked ~ .img_box {
+        margin-left:-100vw;
+    }
+    #ra3:checked ~ .img_box {
+        margin-left:-200vw;
+    }
+    #ra1:checked ~ .btn_box #vs_btn1 {
+        background-color: #030A8C;
+    }
+    #ra2:checked ~ .btn_box #vs_btn2 {
+        background-color: #030A8C;
+    }
+    #ra3:checked ~ .btn_box #vs_btn3 {
+        background-color: #030A8C;
+    }
+    </style>
+    <link rel="stylesheet" href="main.css"><!-- 페이지1 -->
+    <link rel="stylesheet" href="main2.css"><!-- 페이지2 -->
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class="wrap">
+    <header id="hd">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./images/logo.png" alt="거제문화관광로고">
+            </a>
+            <input type="checkbox" id="ck1" class="ck_item">
+            <div id="smart">
+                <label class="smart_wrap" for="ck1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <nav class="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="sub1.html" class="dp1">거제여행</a>
+                        <ul class="sub">
+                            <li><a href="sub11.html">해수욕장</a></li>
+                            <li><a href="sub12.html">섬여행</a></li>
+                            <li><a href="sub13.html">숙박</a></li>
+                            <li><a href="#">쇼핑</a></li>
+                            <li><a href="#">음식</a></li>
+                            <li><a href="#">산/계곡</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub2.html" class="dp1">즐거운축제</a>
+                        <ul class="sub">
+                            <li><a href="sub21.html">신년해맞이축제</a></li>
+                            <li><a href="sub22.html">남부면수국축제</a></li>
+                            <li><a href="#">삼월삼짓날축제</a></li>
+                            <li><a href="#">거제섬꽃축제</a></li>
+                            <li><a href="#">거제몽돌축제</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub3.html" class="dp1">역사/문화</a>
+                        <ul class="sub">
+                            <li><a href="sub31.html">국가지정유산</a></li>
+                            <li><a href="sub32.html">도지정유산</a></li>
+                            <li><a href="#">전통사찰</a></li>
+                            <li><a href="#">거제인물</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub4.html" class="dp1">여행가이드</a>
+                        <ul class="sub">
+                            <li><a href="sub41.html">여행준비</a></li>
+                            <li><a href="sub42.html">교통정보</a></li>
+                            <li><a href="#">여객선/유람선 안내</a></li>
+                            <li><a href="#">공공와이파이</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub5.html" class="dp1">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="sub51.html">새소식</a></li>
+                            <li><a href="sub52.html">내가찍은거제</a></li>
+                            <li><a href="#">여행후기</a></li>
+                            <li><a href="#">여행 Q&A</a></li>
+                            <li><a href="#">불편신고</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="tnb">
+                <a href="log.html">로그인</a>
+                <a href="member.html">회원가입</a>
+                <a href="contact.html">Contact US</a>
+            </nav>
+        </div>
+    </header>
+    <main class="content">
+        <figure id="vs">
+            <input type="radio" id="ra1" class="ra" name="ra" checked>
+            <input type="radio" id="ra2" class="ra" name="ra">
+            <input type="radio" id="ra3" class="ra" name="ra">
+            <ul class="img_box">
+                <li>
+                    <img src="./images/vs01.jpg" alt="거제도 포로수용소 유적공원">
+                    <div class="tit_box">
+                        <h3>거제도 포로수용소 유적공원</h3>
+                        <a href="sub31.html">자세히보기</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="./images/vs02.jpg" alt="학동 흑진주 몽돌해변">
+                    <div class="tit_box">
+                        <h3>학동 흑진주 몽돌해변</h3>
+                        <a href="sub11.html">자세히보기</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="./images/vs03.jpg" alt="공곶이, 내도">
+                    <div class="tit_box">
+                        <h3>공곶이, 내도</h3>
+                        <a href="sub12.html">자세히보기</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn_box">
+                <ul class="btn_wrap">
+                    <li><label for="ra1" class="vs_btn" id="vs_btn1"></label></li>
+                    <li><label for="ra2" class="vs_btn" id="vs_btn2"></label></li>
+                    <li><label for="ra3" class="vs_btn" id="vs_btn3"></label></li>
+                </ul>
+            </div>
+        </figure>
+        <section class="page" id="page1">
+            <div class="page_wrap">
+                <h2 class="page_title">거제 애(愛) 빠지다</h2>
+                <div class="page_grid">
+                    <div class="row1">
+                        <figure id="big_thumb1" class="big_thumb">
+                            <a href="">
+                                <img src="./images/row01_1.jpg" alt="거제식물원">
+                                <div class="thumb_content">
+                                    <h6 class="tit1">거제에서 힐링하자</h6>
+                                    <h5 class="tit2">거제식물원</h5>
+                                </div>
+                            </a>    
+                        </figure>
+                        <figure id="big_thumb2" class="big_thumb">
+                            <a href="">
+                                <img src="./images/row01_21.jpg" alt="신년해맞이축제">
+                                <div class="thumb_content">
+                                    <h6 class="tit1">거제의 축제</h6>
+                                    <h5 class="tit2">신년해맞이축제</h5>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="row2">
+                        <figure id="s_thumb1" class="s_thumb">
+                            <a href="">
+                                <img src="./images/row02_1.jpg" alt="섬안의 섬여행">
+                                <div class="thumb_content">
+                                    <h5 class="tit2">섬안의 섬여행</h5>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure id="s_thumb2" class="s_thumb">
+                            <a href="">
+                                <img src="./images/row02_2.jpg" alt="섬&섬길">
+                                <div class="thumb_content">
+                                    <h5 class="tit2">섬&섬길</h5>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure id="s_thumb3" class="s_thumb">
+                            <a href="">
+                                <img src="./images/row02_3.jpg" alt="거제 맛집">
+                                <div class="thumb_content">
+                                    <h5 class="tit2">거제 맛집</h5>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure id="s_thumb4" class="s_thumb">
+                            <a href="">
+                                <img src="./images/row02_4.jpg" alt="편안한 숙박">
+                                <div class="thumb_content">
+                                    <h5 class="tit2">편안한 숙박</h5>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure id="s_thumb5" class="s_thumb">
+                            <a href="">
+                                <img src="./images/row02_5.jpg" alt="즐거운 캠핑">
+                                <div class="thumb_content">
+                                    <h5 class="tit2">즐거운 캠핑</h5>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page2">
+            <div class="page_wrap">
+                <h2 class="page_title">지금, <span class="txt_color">All 올</span>거제</h2>
+                <div class="page_grid2">
+                    <div class="row3">
+                        <div class="movie_wrap" id="movie_wrap1">
+                            <div class="col span" id="movie1">
+                                <a href="" class="movie" title="새 창 열림"></a>
+                            </div>
+                        </div>
+                        <div class="movie_wrap" id="movie_wrap2">
+                            <ul class="movie_lst">
+                                <li class="col" id="movie2"><a href="" class="movie" title="새 창 열림"></a></li>
+                                <li class="col" id="movie3"><a href="" class="movie" title="새 창 열림"></a></li>
+                                <li class="col" id="movie4"><a href="" class="movie" title="새 창 열림"></a></li>
+                                <li class="col" id="movie5"><a href="" class="movie" title="새 창 열림"></a></li>
+                                <li class="col" id="movie6"><a href="" class="movie" title="새 창 열림"></a></li>
+                                <li class="col" id="movie7"><a href="" class="movie" title="새 창 열림"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row4">
+                        <h4 class="box_tit">자주 찾는 메뉴</h4>
+                        <ul class="box_lst">
+                            <li class="box_item" id="box_item1">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">관광지도 신청</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item2">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">관광안내소</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item3">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">관광지요금</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item4">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">문화관광해설</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item5">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">거제여행사</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item6">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">교통정보</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item7">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">렌터카</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item8">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">교통약자콜택시</h5>
+                                </a>
+                            </li>
+                            <li class="box_item" id="box_item9">
+                                <a href="">
+                                    <div class="box_img"></div>
+                                    <h5 class="box_item_tit">관광홍보영상</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </main>
+    <footer id="ft">
+         <div class="container">
+            <nav id="relation">
+                <ul>
+                    <li>
+                        <input type="radio" name="sel" id="ra11">
+                        <label for="ra11">관광사업소</label>
+                        <div class="sel" id="sel1">
+                            <a href="">기획예산담당관</a>
+                            <a href="">선택2</a>
+                            <a href="">선택3</a>
+                            <a href="">선택4</a>
+                            <a href="">선택5</a>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="sel" id="ra12">
+                        <label for="ra12">면/동</label>
+                        <div class="sel" id="sel2">
+                            <a href="">기획예산담당관</a>
+                            <a href="">선택2</a>
+                            <a href="">선택3</a>
+                            <a href="">선택4</a>
+                            <a href="">선택5</a>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="sel" id="ra13">
+                        <label for="ra13">시/군청</label>
+                        <div class="sel" id="sel3">
+                            <a href="">기획예산담당관</a>
+                            <a href="">선택2</a>
+                            <a href="">선택3</a>
+                            <a href="">선택4</a>
+                            <a href="">선택5</a>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="sel" id="ra14">
+                        <label for="ra14">패밀리사이트</label>
+                        <div class="sel" id="sel4">
+                            <a href="">기획예산담당관</a>
+                            <a href="">선택2</a>
+                            <a href="">선택3</a>
+                            <a href="">선택4</a>
+                            <a href="">선택5</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="banner_bar">
+                <ul>
+                    <li><a href="https://www.budongsan24.kr/" target="_blank"><img src="./images/ban01.gif" alt="통합신고센터"></a></li>
+                    <li><a href="https://www.laiis.go.kr/lips/mlo/lcl/organizationList.do" target="_blank"><img src="./images/ban02.gif" alt="행정안전부 내고장 알리미"></a></li>
+                    <li><a href="https://www.greendaero.go.kr/local/geojesi" target="_blank"><img src="./images/ban03.gif" alt="그런데로"></a></li>
+                    <li><a href="https://gis.gyeongnam.go.kr/" target="_blank"><img src="./images/ban04.jpg" alt="경상남도 스마트공간정보플랫폼"></a></li>
+                    <li><a href="https://www.gov.kr/portal/main" target="_blank"><img src="./images/ban05.png" alt="정부 24"></a></li>
+                    <li><a href="https://www.bokjiro.go.kr/ssis-teu/index.do" target="_blank"><img src="./images/ban06.png" alt="복지"></a></li>
+                </ul>
+            </nav>
+            <nav id="fnb">
+                <a href="promotion.html">회원약관</a>
+                <a href="privacy.html">개인정보처리방침</a>
+                <a href="#">저작권정책</a>
+                <a href="#">홈페이지 의견접수</a>
+                <a href="#" download>뷰어 다운로드</a>
+            </nav>
+            <div class="copyright">
+                <p class="addr">(53257) 거제시 계룡로 125 (고현동) / 대표전화 : 055)639-3000</p>
+                <p class="copy">Copyright ⓒ 2019 GEOJE CITY. All Rights Reserved.</p>
+            </div>
+         </div>   
+    </footer>
+</div>
+</body>
+</html>

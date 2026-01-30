@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+.page {
+    clear: both;
+    width: 100vw;
+    padding: 40px 0px;
+}
+
+.page_wrap {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px; 
+}
+
+.page_title {
+    text-align: center;
+    font-family: 'NanumPen';
+    font-size: 78px;
+    padding:0px 30px;
+    font-weight:600;
+}
+
+.page_title::before, .page_title::after {
+    font-size:100px;
+    display:inline-block;
+    margin-top: 10px;
+}
+
+.page_title::before {
+    content:'『';
+}
+
+.page_title::after {
+    content:'』';
+}
+
+.page_grid {
+    clear: both;
+    width: 100%;
+}
+
+#page1 {
+    background-color: #f9fff2;
+    background-image: url("./images/section2_bg1.png"), url("./images/section2_bg2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top, center bottom;
+}
+
+.row1, .row2 {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    justify-content: space-between;
+}
+
+.row1 figure, .row2 figure {
+    filter: brightness(0.8);
+    transition: 0.5s;
+}
+
+.row1 figure:hover, .row2 figure:hover {
+    filter: brightness(1.2);
+}
+
+.big_thumb {
+    position: relative;
+}
+
+.big_thumb img {
+    border: 1px solid #f1f1f1;
+    display:block;
+    width: 100%;
+}
+
+.big_thumb:hover img {
+    border: 1px solid #05AFF2;
+}
+
+.big_thumb .thumb_content {
+    position:absolute;
+    width: 100%;
+    top: 32px;
+    z-index: 80;
+    padding-top: 24px;
+}
+
+.tit1, .tit2, .tit3 {
+    text-align: center;
+    font-family: 'NanumPen';
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 1px 1px 0px #333;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.tit1 {
+    font-size:36px;
+}
+
+.tit2 {
+    font-size: 48px;
+}
+
+.s_thumb {
+    position: relative;
+}
+
+.s_thumb a {
+    display:block;
+    width: 100%;
+}
+
+.s_thumb img {
+    display:block;
+    width: 100%;
+    border: 1px solid #f1f1f1;
+}
+
+.s_thumb:hover img {
+    border: 1px solid #05AFF2;
+}
+
+.s_thumb .thumb_content {
+    position:absolute;
+    width: 100%;
+    top: 32px;
+    z-index: 80;
+    padding-top: 24px;
+}

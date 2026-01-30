@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.icon_bar li {
+    width: 150px;
+    height: 150px;
+    background-image: url("./images/iconset.png");
+    background-repeat: no-repeat;
+}
+
+.icon1 {
+    background-position: 0 0;
+}
+
+.icon2 {
+    background-position: -150px 0;
+}
+
+.icon3 {
+    background-position: -300px 0;
+}
+
+.icon4 {
+    background-position: -450px 0;
+}
+
+.icon5 {
+    background-position: -600px 0;
+}
+
+.icon6 {
+    background-position: 0 -150px;
+}
+
+.icon7 {
+    background-position: -150px -150px;
+}
+
+.icon8 {
+    background-position: -300px -150px;
+}
